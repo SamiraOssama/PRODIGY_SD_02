@@ -1,25 +1,19 @@
-<?php
-session_start();
-require_once 'GuessingGame.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
+    <title>Guess the Number Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Number Guessing Game</h2>
-        <p><?php echo $message; ?></p>
-        <form method="post">
-            <input type="text" name="guess" placeholder="Enter your guess" required>
-            <br>
-            <input type="submit" value="Guess">
-        </form>
+        <h2>🎲Guess the Number🎲</h2>
+        <p id="feedback">Guess a number between 1 and 50. Good luck! 🍀</p>
+        <input type="number" id="userGuess" placeholder="Enter your guess (1-50)" required>
+        <br>
+        <button onclick="checkGuess()">Submit Guess</button>
     </div>
+    <script src="game.js"></script>
 </body>
 </html>
